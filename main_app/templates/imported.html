@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Total by date</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Total Qliq</th>
+			<th>Total Qoil</th>
+		</tr>
+		{% for item in total_by_date %}
+		<tr>
+			<td>{{ item.date }}</td>
+			<td>{{ item.total_qliq }}</td>
+			<td>{{ item.total_qoil }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

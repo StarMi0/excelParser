@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Data Table</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Company</th>
+                <th>Fact Qliq</th>
+                <th>Fact Qoil</th>
+                <th>Forecast Qliq</th>
+                <th>Forecast Qoil</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in data %}
+            <tr>
+                <td>{{ d.id }}</td>
+                <td>{{ d.company.name }}</td>
+                <td>{{ d.fact_qliq }}</td>
+                <td>{{ d.fact_qoil }}</td>
+                <td>{{ d.forecast_qliq }}</td>
+                <td>{{ d.forecast_qoil }}</td>
+                <td>{{ d.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
